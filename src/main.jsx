@@ -4,14 +4,26 @@ import "./index.css";
 
 const root = createRoot(document.getElementById("root"));
 
-root.render(<MyList />);
+function Header() {
+  return (
+    <header>
+      <img src="./src/assets/react.png" width="60px" alt="React Logo" />
+      <nav>
+        <ul className="nav-list">
+          <li>Pricing</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
 
-function MyList() {
+function MainContent() {
   return (
     <main>
-      <img src="./src/assets/react.png" width="60px" alt="React Logo" />
       <h1>My first React list</h1>
-      <ul>
+      <ul className="main-list">
         <li>React was released in 2013</li>
         <li>Created by Jordan Walker</li>
         <li>Over 200k downloads</li>
@@ -21,3 +33,23 @@ function MyList() {
     </main>
   );
 }
+
+function Footer() {
+  return (
+    <footer>
+      <small> &copy; 2025 Macarena</small>
+    </footer>
+  );
+}
+
+function Page() {
+  return (
+    <>
+      <Header />
+      <MainContent />
+      <Footer />
+    </>
+  );
+}
+
+root.render(<Page />);

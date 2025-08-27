@@ -5,6 +5,40 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px;
 }
-ul {
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  /* delete bullet point  */
+  list-style: none;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+main {
+  background: url(./assets/react.png) no-repeat;
+  background-size: 200px auto;
+  background-position-x: right;
+  background-position-y: 80%;
+  /* background-position: right center; */
+}
+.main-list {
   margin-left: 50px;
+  background: transparent;
+}
+.main-list li {
+  background: transparent;
+}
+.main-list > li::marker {
+  color: skyblue !important;
+  font-size: 1.5rem;
+}
+footer {
+  text-align: center;
 }
